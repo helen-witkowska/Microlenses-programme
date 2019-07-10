@@ -25,10 +25,9 @@ When prompted, input the option required.
     5) Input the photoresist thickness, diameter to find the height/shape of the reflowed photoresist and the ROC, height and the minimum etching time to get the lens
     6) Input 2/3 of ROC, height and diameter of the lens, find the focal length and NA of the diamond microlens
     7) Input the desired ROC and diameter of the lens, get the minimum necessary h0, the minimum etch time, the minimum reflow temp, and the shape of the reflowed PR and lens
-    #8) Input the radius, ROC and height of the reflowed photoresist, and get the lens ROC and minimum etch time
-    #9) Input the desired focal length and reflow temperature and get the required lens radius and height.
-    10) Input h0, r_t, r_b, r_reflow, h_reflow, r_lens, h to get shape on graph and evaporation percentage
-    11) Input the d and h0 to find the minimum reflow temperature
+    8) Input the desired focal length and reflow temperature and get the required lens radius and height.
+    9) Input h0, r_t, r_b, r_reflow, h_reflow, r_lens, h to get shape on graph and evaporation percentage
+    10) Input the d and h0 to find the minimum reflow temperature
    
 NB. There are several assumptions in place. The first being that the lens forms a perfect circle on the diamond 
       surface. The second assumption is that all spheres are perfectly smooth. The third is that every length
@@ -190,7 +189,8 @@ def growth_start(t,x,rate_resist,rate_diamond,r,y,dt,angle,dx):
 
 
 def h_height(trunc,dx,x,r,vol_0,con,h_0):
-    #Find the initial height of the PR, when it was spin coated onto the substrate
+    #Input the initial height of the PR, when it was spin coated onto the substrate
+    #And find the shape of the reflowed photoresist
     i=0
     #trunc is the point at which the sequence truncates and returns an answer if it has not been reached already
 
